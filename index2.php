@@ -17,8 +17,9 @@
     ?>
 
     <?php
-      $videogames = array('Starcraft','Democracy 3','Dead or Alive 5','Forza Motorsport 6','NHL 16','Lost in Harmony');
+      $videogames = array('Starcraft','Democracy 3','Dead or Alive 5','Forza Motorsport 6','NHL 16','Lost in Harmony','DiRT Rally','Football Manager 2016','The Witness','Rise of the Tomb Raider','Quantum Break','Total War Attila');
 
+       // function to add lines in the table #vgame :
        function addline($element,$i) {
     ?>
          <tr>
@@ -34,7 +35,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h2>Tableau listant des jeux vidéos</h2>
           <div class="table-responsive">
-            <table class="table">
+            <table class="table" id="vgame">
               <thead>
                 <tr>
                   <th>Clé</th>
@@ -60,7 +61,16 @@
     </section>
 
   </body>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
   <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+  <script>
+  // plug_in jQuery datatable zero configuration
+  $(document).ready(function() {
+    $('#vgame').DataTable();
+  } );
+  </script>
+  
 </html>
